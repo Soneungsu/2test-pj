@@ -111,6 +111,19 @@ footer .f_section {
   margin-top: 30px;
 }
 
+.link {
+  display: flex;
+  flex-direction: column;
+}
+
+.link a {
+  text-decoration: underline;
+}
+
+.f_title {
+  margin-bottom: 18px;
+}
+
 .pop_container {
   display: none;
   position: fixed;
