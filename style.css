@@ -1,1 +1,10 @@
 @import url(./resetcss/reset.css);
+
+#headerBanner {
+  position: fixed;
+  width: 100%;
+  height: 30px;
+  overflow: hidden;
+  background: #222;
+  z-index: 9999;
+}
