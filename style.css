@@ -69,7 +69,11 @@
   margin-right: 30px;
 }
 
-a {
+.categoryWrap > li > a {
+  font-size: 16px;
+  font-weight: bold;
+}
+.nbRight > ul > li > a {
   font-size: 16px;
   font-weight: bold;
 }
@@ -77,16 +81,47 @@ a {
 footer {
   position: fixed;
   bottom: 0;
-  left: 0;
   width: 100%;
   background-color: #f2f2f2; /* 푸터 배경색 */
-  padding: 62px 50px 70px;
+  z-index: 1000;
+}
+
+.minSizeWrap {
   display: flex;
   justify-content: space-between;
   line-height: 18px;
-  z-index: 1000; /* 필요하면 다른 요소 위로 올리기 */
+  padding: 62px 50px 70px;
 }
 
 footer .f_section {
   font-size: 12px;
+}
+
+.company_cs h3 {
+  font-weight: 600;
+}
+
+.company_chat a {
+  text-decoration: underline;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.company_addr {
+  margin-top: 30px;
+}
+
+.pop_container {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-left: -215px;
+  margin-top: -315px;
+  width: 430px;
+  height: 630px;
+  background: #fff;
+  z-index: 100000;
+  padding: 0 35px;
+  box-sizing: border-box;
 }
