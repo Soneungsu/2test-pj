@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+  </head>
+  <body>
+    <div class="wrap">
+      <!--header 및 footer는 화면 로드 시 자동으로 내용으로 로드됩니다.-->
+      <header></header>
+      <main></main>
+      <footer></footer>
+      <script>
+        $(() => {
+          $("header").load("../include/header.html");
+          $("footer").load("../include/header.html");
+        });
+      </script>
+    </div>
+  </body>
+</html>
