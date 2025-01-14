@@ -1,0 +1,31 @@
+@import url(../resetcss/reset.css);
+
+.wrap {
+  min-height: 100vh;
+  background: #f8f8fa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container {
+  width: 550px;
+  padding-bottom: 210px;
+}
+.topNav {
+  display: flex;
+  justify-content: space-between;
+  padding: 17px;
+}
+.logo {
+  display: flex;
+  justify-content: center;
+}
+.logo-svg2 {
+  width: 255px;
+  height: 55px;
+}
+
+.syncWrap {
+  background: #fff;
+  padding: 0 45px;
+}

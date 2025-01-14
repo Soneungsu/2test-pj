@@ -53,6 +53,11 @@
   margin-right: 30px;
 }
 
+.dropDownMenu ul {
+  display: flex;
+  flex-direction: column;
+}
+
 .nbRight {
   position: relative;
   display: flex;
@@ -76,6 +81,32 @@
 .nbRight > ul > li > a {
   font-size: 16px;
   font-weight: bold;
+}
+
+.allMeunContainer {
+  display: flex;
+  width: 100%;
+}
+
+.menuLeftWrap {
+  overflow: hidden;
+  position: relative;
+  padding: 170px 0 40px;
+  display: flex;
+  justify-content: center;
+  min-width: 50%;
+  float: left;
+}
+
+.menuLeftWrap ul li {
+  margin: 20px 50px;
+}
+
+.menuRightWrap {
+  float: left;
+  font-size: 0;
+  border-left: 1px solid #cdcdcd;
+  margin-top: 180px;
 }
 
 footer {
