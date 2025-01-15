@@ -132,3 +132,16 @@
 .forgotUser {
   color: #888;
 }
+#snsLogin {
+  margin: 50px 0;
+}
+.snsWrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.snsWrap li {
+  margin: 0 8px;
+  cursor: pointer;
+}
