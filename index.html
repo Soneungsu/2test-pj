@@ -21,27 +21,25 @@
       <!--header 및 footer는 화면 로드 시 자동으로 내용으로 로드됩니다.-->
       <footer></footer>
       <!--header 및 footer는 화면 로드 시 자동으로 내용으로 로드됩니다.-->
-      <script>
-        $(document).ready(() => {
-          if (typeof jQuery != "undefined") {
-            // console.log("jQuery loaded");
-            $("header").load("./include/header.html");
-            $("footer").load("./include/footer.html");
-          } else {
-            console.log("jQuery not loaded");
-          }
-
-          $(".dropdown").hover(
-            () => {
-              $(".allMenuBox").fadeIn(200);
-            },
-            () => {
-              $(".allMenuBox").fadeOut(200);
-            }
-          );
-        });
-      </script>
-      <script src="./main.js"></script>
     </div>
+    <script>
+      $(document).ready(() => {
+        if (typeof jQuery !== "undefined") {
+          console.log("reee");
+          $("header").load("./include/header.html");
+          $("footer").load("./include/footer.html");
+        } else {
+          console.log("jQuery not loaded");
+        }
+        $(".dropdown").hover(
+          () => {
+            $(this).find(".allMenuBox").fadeIn(200);
+          },
+          () => {
+            $(this).find(".allMenuBox").fadeOut(200);
+          }
+        );
+      });
+    </script>
   </body>
 </html>

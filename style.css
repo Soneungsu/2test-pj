@@ -53,11 +53,6 @@
   margin-right: 30px;
 }
 
-.dropDownMenu ul {
-  display: flex;
-  flex-direction: column;
-}
-
 .nbRight {
   position: relative;
   display: flex;
@@ -84,8 +79,7 @@
 }
 
 .allMenuBox {
-  display: none;
-  z-index: 99999;
+  display: none; /* 기본 상태는 숨김 */
 }
 
 .allMeunContainer {
