@@ -20,7 +20,9 @@
   font-weight: 500;
   line-height: 30px;
 }
-
+.ham-btn {
+  display: none;
+}
 .nbContainer {
   position: fixed;
   top: 0;
@@ -167,4 +169,34 @@ footer .f_section {
 }
 .f_section .f_section06 {
   font-size: 12px;
+}
+
+/* 반응형 */
+
+@media (max-width: 768px) {
+  footer {
+    padding: 50px 10px;
+  }
+  .nbWrap {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .ham-btn {
+    display: block;
+  }
+  .minSizeWrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+  }
+  .categoryContainer,
+  .nbRight,
+  .f_section02,
+  .f_section03,
+  .f_section04,
+  .f_section05 {
+    display: none;
+  }
 }
