@@ -1,0 +1,102 @@
+body {
+  font-family: "Noto Sans Korean";
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.best-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
+}
+
+.best-title-tx {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.card {
+  border: none;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-body {
+  padding: 0;
+  color: rgb(106, 104, 104);
+  font-size: 12px;
+}
+
+.card-img-top {
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+  transition: transform 0.3s ease;
+  object-fit: cover;
+  width: 100%;
+  height: 319px;
+}
+
+.card-img-top:hover {
+  transform: scale(1.09);
+  transition: transform 0.3s ease-in-out;
+  z-index: 1;
+}
+
+.card-body {
+  flex-grow: 1;
+  padding: 0.5rem;
+  z-index: 2;
+  background: white;
+}
+
+.card-title {
+  font-size: 12px;
+}
+
+.card-text {
+  font-size: 12px;
+  padding-top: 0;
+}
+
+.tx-ti {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* .page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-tx {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+} */
+
+.pagination {
+  justify-content: center;
+}
+
+.pagination .page-link {
+  border: none; /* 버튼의 테두리 제거 */
+  box-shadow: none; /* 버튼 그림자 제거 */
+}
+
+.pagination .page-link:hover {
+  border: none; /* 호버 상태에서도 테두리 제거 */
+  background-color: white; /* 필요 시 호버 배경색 설정 */
+}
+
+.pagination .page-item.active .page-link {
+  border: none; /* 활성화된 페이지 테두리 제거 */
+  box-shadow: none; /* 그림자 제거 */
+  background-color: white;
+  font-weight: 800;
+}
