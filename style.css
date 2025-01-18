@@ -123,6 +123,7 @@
 
 footer {
   position: fixed;
+  margin-top:50px;
   bottom: 0;
   width: 100%;
   z-index: 1000;
@@ -237,6 +238,7 @@ footer .f_section {
 
 /* Scroll Container for Fullpage Scroll */
 .scroll-container {
+  padding-bottom: 100px;
   scroll-snap-type: y mandatory; /* 세로 스크롤 스냅 */
   overflow-y: scroll; /* 스크롤 활성화 */
   height: 100vh; /* 화면 높이를 100%로 설정 */
@@ -403,24 +405,29 @@ footer .f_section {
   background-color: #0056b3;
 }
 
+.container-fluid {
+  padding-bottom: 100px; /* Footer와의 간격 확보 */
+}
 
 
-.product-grid .card {
+.card {
+  width:80%;
+  margin:auto;
   border: none;
   transition: transform 0.3s ease-in-out;
 }
 
-.product-grid .card:hover {
+.card:hover {
   transform: translateY(-10px);
 }
 
-.product-grid .row {
+.card .row {
   row-gap: 20px;
   column-gap: 20px;
 }
 
 .card-img-top {
-  height: 250px;
+  height: 200px;
   object-fit: cover;
   border-radius: 8px;
 }
@@ -489,7 +496,7 @@ footer .f_section {
 }
 
 .last-content {
-  position: relative;
+  position: fixed;
   width: 100%;
   height: 80vh; /* 높이를 적당히 설정 (화면 높이의 60%) */
   overflow: hidden; /* 초과 이미지 숨김 */
@@ -537,3 +544,4 @@ footer .f_section {
   background-color: white;
   color: black;
 }
+
