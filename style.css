@@ -336,7 +336,6 @@ footer .f_section {
 /* Split Section Layout */
 .split-section {
   display: flex;
-  height: 100vh; /* 화면 전체 높이 */
   overflow: hidden; /* 스크롤 방지 */
 }
 
