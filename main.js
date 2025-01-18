@@ -14,8 +14,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // 사이드바 닫기 기능 (사이드바 영역 클릭 시 닫힘)
-  cartSidebar.addEventListener("click", () => {
-    cartSidebar.classList.remove("open");
+  $(document).on("click", "#close-button", function (e) {
+    e.preventDefault();
+
+        // 사이드바 닫기 기능
+    if(cartSidebar){
+      cartSidebar.classList.remove("open");
+    }
   });
 });
