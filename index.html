@@ -16,6 +16,11 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous">
+  </script>
     <link rel="stylesheet" href="style.css" />
   </head>
 
@@ -24,8 +29,43 @@
       <!—header 및 footer는 화면 로드 시 자동으로 내용으로 로드됩니다.—>
       <header></header>
       <!—header 및 footer는 화면 로드 시 자동으로 내용으로 로드됩니다.—>
-      <!—시작—>
+ 
+       <!-- Cart Sidebar -->
+       <div id="cartSidebar" class="cart-sidebar">
+        <div class="cart-header">
+          <div>
+            <span style="cursor: pointer"><svg id="closeSidebar" width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M16.1004 21.7L8.61252 14.2122C8.49537 14.095 8.49537 13.9051 8.61252 13.7879L16.1004 6.30005" stroke="currentColor" stroke-width="1.4"></path></svg></span>
+            <span class="cart-title">장바구니</span>
+          </div>
 
+          <div style="width:28px; height:28px;">
+            <button id="homeButton" style="border: none; background-color: inherit;" type="button" aria-label="메인 페이지로 이동">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                <path d="M14.0004 23.7999H5.20039C5.03471 23.7999 4.90039 23.6656 4.90039 23.4999V11.0023C4.90039 10.9065 4.94609 10.8166 5.02339 10.7601L13.8234 4.3293C13.9288 4.25226 14.072 4.25226 14.1774 4.3293L22.9774 10.7601C23.0547 10.8166 23.1004 10.9065 23.1004 11.0023V23.4999C23.1004 23.6656 22.9661 23.7999 22.8004 23.7999H14.0004ZM14.0004 23.7999V14.5055" stroke="currentColor" stroke-width="1.4"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="cart-checkBox">
+          <div class="cart-selectAll">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+            <label for="flexCheckChecked">
+              전체 선택
+            </label>
+          </div>
+          <button type="button" class="cart-all-check__delete" aria-label="선택한 항목 삭제하기버튼">선택 삭제</button>
+        </div>
+        
+        <div class="cart-content">
+            장바구니에 담긴 상품이 없습니다.
+        </div>
+        <div class="order-button-Box"><button class="order-button">주문하기</button></div>
+
+        
+      </div>
+ 
+      <!—시작—>
       <main class="scroll-container">
         <section class="sections">
           <div
@@ -338,12 +378,43 @@
       <footer></footer>
       <!--header 및 footer는 화면 로드 시 자동으로 내용으로 로드됩니다.-->
     </div>
+
     <script>
       $(document).ready(() => {
         if (typeof jQuery !== "undefined") {
           console.log("reee");
-          $("header").load("./include/header.html");
+
+
+          $("header").load("./include/header.html", () => {
+            const cartButton = document.getElementById("cartButton");
+            const cartSidebar = document.getElementById("cartSidebar");
+            const closeSidebar = document.getElementById("closeSidebar");
+
+            if (cartButton) {
+              cartButton.addEventListener("click", () => {
+                cartSidebar.classList.add("open");
+              });
+            }
+
+            if (closeSidebar) {
+              closeSidebar.addEventListener("click", () => {
+                cartSidebar.classList.remove("open");
+              });
+            }
+
+            document.addEventListener("click", (e) => {
+              if (!cartSidebar.contains(e.target) && !cartButton.contains(e.target)) {
+                cartSidebar.classList.remove("open");
+              }
+            });
+
+            document.getElementById("homeButton").addEventListener("click", () => {
+              window.location.href = "/index.html"; // 이동할 URL
+            });
+          });
+
           $("footer").load("./include/footer.html");
+
         } else {
           console.log("jQuery not loaded");
         }
@@ -357,10 +428,12 @@
         );
       });
     </script>
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script src="main.js"></script>
   </body>
 </html>
