@@ -129,10 +129,9 @@
 }
 
 footer {
-  /* position: fixed;  */
-  bottom: 0;
+  position: absolute;
   width: 100%;
-  z-index: 1000;
+  height: 100px;
 }
 
 .minSizeWrap {
@@ -183,7 +182,6 @@ footer .f_section {
   transform: translate(0, 0); /* 중앙 정렬 제거 */
   text-align: left;
   color: #fff; /* 글자 색 */
-  background-color: rgba(0, 0, 0, ); /* 배경 투명도 */
   padding: 0px 20px;
   border-radius: 8px;
 }
@@ -244,24 +242,20 @@ footer .f_section {
 
 /* Scroll Container for Fullpage Scroll */
 .scroll-container {
-  padding-top: 100px;
-  padding-bottom: 100px;
   scroll-snap-type: y mandatory; /* 세로 스크롤 스냅 */
   overflow-y: scroll; /* 스크롤 활성화 */
-  height: 100vh; /* 화면 높이를 100%로 설정 */
 }
 
 /* 각 섹션 */
-.section {
+.sections {
   scroll-snap-align: start; /* 스크롤 스냅 정렬 */
-  height: 100vh; /* 각 섹션이 한 화면 전체를 차지 */
   display: flex;
   align-items: center;
   justify-content: center;
   background-size: cover;
   background-position: center;
-  margin:0;
-  padding:0;
+  margin: 0;
+  padding: 0;
 }
 
 /* 이미지와 텍스트 오버레이 */
@@ -306,7 +300,7 @@ footer .f_section {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap:15px;
+  gap: 15px;
   opacity: 0; /* 기본 상태에서 숨김 */
   transition: opacity 0.3s ease-in-out; /* 부드러운 전환 효과 */
 }
@@ -314,14 +308,14 @@ footer .f_section {
 .text-overlay h2 {
   font-size: 2rem;
   font-weight: bold;
-  margin : 0;
-  color:white;
+  margin: 0;
+  color: white;
 }
 
 .text-overlay p {
   margin-top: 30px;
   font-size: 1.2rem;
-  color : #fff;
+  color: #fff;
 }
 
 .text-overlay button {
@@ -395,7 +389,7 @@ footer .f_section {
 .overlay3 h2 {
   font-size: 1.5rem;
   margin-bottom: 20px;
-  color : white;
+  color: white;
 }
 
 .overlay3 button {
@@ -416,10 +410,9 @@ footer .f_section {
   padding-bottom: 100px; /* Footer와의 간격 확보 */
 }
 
-
 .card {
-  width:80%;
-  margin:auto;
+  width: 80%;
+  margin: auto;
   border: none;
   transition: transform 0.3s ease-in-out;
 }
@@ -471,7 +464,6 @@ footer .f_section {
 .card-body {
   text-align: center;
 }
-
 
 /* 할인율 스타일 */
 .discount-rate {
