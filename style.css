@@ -34,6 +34,7 @@
   left: 0;
   display: flex;
   justify-content: space-between;
+  z-index: 9999;
 }
 
 .nbWrap {
@@ -128,7 +129,7 @@
 }
 
 footer {
-  position: fixed;
+  /* position: fixed;  */
   bottom: 0;
   width: 100%;
   z-index: 1000;
