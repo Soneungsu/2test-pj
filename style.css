@@ -238,6 +238,7 @@ footer .f_section {
 
 /* Scroll Container for Fullpage Scroll */
 .scroll-container {
+  padding-top: 100px;
   padding-bottom: 100px;
   scroll-snap-type: y mandatory; /* 세로 스크롤 스냅 */
   overflow-y: scroll; /* 스크롤 활성화 */
