@@ -23,6 +23,9 @@
 .ham-btn {
   display: none;
 }
+.searh-btn {
+  display: none;
+}
 .nbContainer {
   position: fixed;
   top: 0;
@@ -46,6 +49,7 @@
 }
 
 .categoryWrap {
+  display: flex;
   margin-left: 50px;
   margin-top: 69px;
 }
@@ -179,10 +183,14 @@ footer .f_section {
   }
   .nbWrap {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    width: 100% !important;
+    margin: 10px 0;
+    padding: 30px 10px;
   }
-  .ham-btn {
+  .ham-btn,
+  .searh-btn {
     display: block;
   }
   .minSizeWrap {
@@ -198,5 +206,9 @@ footer .f_section {
   .f_section04,
   .f_section05 {
     display: none;
+  }
+  .logo-svg2 {
+    width: 100px;
+    margin: 0;
   }
 }
