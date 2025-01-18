@@ -20,7 +20,12 @@
   font-weight: 500;
   line-height: 30px;
 }
-
+.ham-btn {
+  display: none;
+}
+.searh-btn {
+  display: none;
+}
 .nbContainer {
   position: fixed;
   top: 0;
@@ -29,6 +34,7 @@
   left: 0;
   display: flex;
   justify-content: space-between;
+  z-index: 9999;
 }
 
 .nbWrap {
@@ -44,6 +50,7 @@
 }
 
 .categoryWrap {
+  display: flex;
   margin-left: 50px;
   margin-top: 69px;
 }
@@ -122,8 +129,7 @@
 }
 
 footer {
-  position: fixed;
-  margin-top:50px;
+  /* position: fixed;  */
   bottom: 0;
   width: 100%;
   z-index: 1000;
@@ -546,25 +552,40 @@ footer .f_section {
   color: black;
 }
 
-header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 9999; /* Ensure it's above other content */
-  background-color: white; /* Optional: Add background to distinguish */
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for visibility */
-}
+/* 반응형 */
 
-/* Ensure body content starts below the header */
-body {
-  margin: 0;
-  padding-top: 120px; /* Adjust based on header height */
-  padding-bottom: 120px;
-  margin-bottom:100px;
+@media (max-width: 768px) {
+  footer {
+    padding: 50px 10px;
+  }
+  .nbWrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100% !important;
+    margin: 10px 0;
+    padding: 30px 10px;
+  }
+  .ham-btn,
+  .searh-btn {
+    display: block;
+  }
+  .minSizeWrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+  }
+  .categoryContainer,
+  .nbRight,
+  .f_section02,
+  .f_section03,
+  .f_section04,
+  .f_section05 {
+    display: none;
+  }
+  .logo-svg2 {
+    width: 100px;
+    margin: 0;
+  }
 }
-
-main.scroll-container {
-  padding-top: 20px; /* Ensure no overlap between content and header */
-  padding-bottom: 100px;
-}
-

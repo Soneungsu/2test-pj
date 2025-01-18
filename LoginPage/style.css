@@ -28,7 +28,6 @@
 .syncWrap {
   background: #fff;
   padding: 0 45px;
-  height: 100vh;
 }
 .kakaoLoginSection {
   padding: 50px 0 35px;
@@ -134,14 +133,51 @@
 }
 #snsLogin {
   margin: 50px 0;
+  border-top: 1px solid#e5e5e5;
+  position: relative;
+}
+
+.content::after {
+  top: -8px;
+  content: "또는";
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+  color: #e5e5e5;
+  padding: 0 10px;
+  margin: 0 auto;
+  font-size: 12px;
+  font-weight: 300;
+  background: #fff;
 }
 .snsWrap {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 20px 0;
 }
 
 .snsWrap li {
   margin: 0 8px;
   cursor: pointer;
+}
+.kr-footer {
+  font-size: 13px;
+  color: black;
+  padding: 26px 0 15px;
+}
+
+.kr-footer div {
+  margin: 8px 0;
+}
+
+strong {
+  font-weight: bold;
+}
+
+.copyright {
+  font-size: 13px;
+  color: #888;
+  text-transform: uppercase;
+  text-align: left !important;
 }
