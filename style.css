@@ -546,3 +546,25 @@ footer .f_section {
   color: black;
 }
 
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999; /* Ensure it's above other content */
+  background-color: white; /* Optional: Add background to distinguish */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for visibility */
+}
+
+/* Ensure body content starts below the header */
+body {
+  margin: 0;
+  padding-top: 120px; /* Adjust based on header height */
+  padding-bottom: 120px;
+  margin-bottom:100px;
+}
+
+main.scroll-container {
+  padding-top: 20px; /* Ensure no overlap between content and header */
+  padding-bottom: 100px;
+}
+
