@@ -176,6 +176,382 @@ footer .f_section {
   font-size: 12px;
 }
 
+.carousel-caption {
+  position: absolute;
+  bottom: 50%; /* 하단에서 위로 20% */
+  left: 10%; /* 왼쪽에서 오른쪽으로 10% */
+  transform: translate(0, 0); /* 중앙 정렬 제거 */
+  text-align: left;
+  color: #fff; /* 글자 색 */
+  background-color: rgba(0, 0, 0, ); /* 배경 투명도 */
+  padding: 0px 20px;
+  border-radius: 8px;
+}
+
+.carousel-caption h2 {
+  font-size: 2rem;
+  font-family: Brewery Com;
+  font-weight: 700;
+  line-height: 52px;
+  margin-bottom: 30px;
+}
+
+.carousel-caption a {
+  color: #fff;
+  text-decoration: none;
+  background-color: #007bff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.carousel-caption span {
+  display: block; /* 줄바꿈 적용 */
+  margin-top: 10px; /* 제목과 서브텍스트 간 간격 */
+  font-size: 2rem; /* 메인 제목과 동일한 크기 설정 */
+  font-family: Brewery Com; /* 동일한 폰트 패밀리 적용 */
+  font-weight: 700; /* 동일한 굵기 적용 */
+  line-height: 52px; /* 동일한 줄 간 간격 적용 */
+}
+
+.carousel-caption a:hover {
+  background-color: White;
+}
+
+/* 텍스트 애니메이션 효과 */
+.fade-in-text {
+  animation: fadeInUp 1.5s ease-in-out; /* 1.5초 동안 애니메이션 효과 적용 */
+  opacity: 0; /* 초기 투명도 */
+  line-height: 2.5; /* 줄 간 간격 */
+  text-align: left; /* 텍스트 정렬 */
+}
+
+.carousel-item.active .fade-in-text {
+  opacity: 1; /* 활성화된 슬라이드에서 투명도 변경 */
+}
+
+/* 애니메이션 정의 */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0; /* 처음에는 보이지 않음 */
+    transform: translateY(20px); /* 아래에서 위로 이동 */
+  }
+  100% {
+    opacity: 1; /* 완전히 보이도록 */
+    transform: translateY(0); /* 제자리로 이동 */
+  }
+}
+
+/* Scroll Container for Fullpage Scroll */
+.scroll-container {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  scroll-snap-type: y mandatory; /* 세로 스크롤 스냅 */
+  overflow-y: scroll; /* 스크롤 활성화 */
+  height: 100vh; /* 화면 높이를 100%로 설정 */
+}
+
+/* 각 섹션 */
+.section {
+  scroll-snap-align: start; /* 스크롤 스냅 정렬 */
+  height: 100vh; /* 각 섹션이 한 화면 전체를 차지 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  margin:0;
+  padding:0;
+}
+
+/* 이미지와 텍스트 오버레이 */
+.content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.content img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 이미지 비율 유지 */
+}
+
+/* 이미지 컨테이너 스타일 */
+.image-wrapper {
+  position: relative; /* 텍스트 오버레이를 위한 상대 위치 */
+  overflow: hidden; /* 오버플로우 방지 */
+}
+
+.image-wrapper img {
+  width: 100%; /* 이미지가 컨테이너를 꽉 채움 */
+  height: auto;
+  display: block;
+}
+
+/* 마우스를 이미지 위에 올릴 때 */
+.image-wrapper:hover .text-overlay {
+  opacity: 1; /* 텍스트 오버레이 표시 */
+}
+
+.text-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* 검은색 반투명 배경 */
+  color: #fff; /* 흰색 글자 */
+  display: flex; /* 중앙 정렬 */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap:15px;
+  opacity: 0; /* 기본 상태에서 숨김 */
+  transition: opacity 0.3s ease-in-out; /* 부드러운 전환 효과 */
+}
+
+.text-overlay h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin : 0;
+  color:white;
+}
+
+.text-overlay p {
+  margin-top: 30px;
+  font-size: 1.2rem;
+  color : #fff;
+}
+
+.text-overlay button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.text-overlay button:hover {
+  background-color: #0056b3;
+}
+
+/* Split Section Layout */
+.split-section {
+  display: flex;
+  height: 100vh; /* 화면 전체 높이 */
+  overflow: hidden; /* 스크롤 방지 */
+}
+
+.split-image {
+  flex: 1; /* 2분할 */
+  position: relative; /* overlay 위치 설정을 위해 */
+}
+
+.split-image img {
+  width: 100%; /* 이미지가 칸을 꽉 채우도록 */
+  height: 100%;
+  object-fit: cover; /* 이미지 비율 유지 */
+}
+
+.image-wrapper3 {
+  position: relative; /* 텍스트 오버레이를 위한 상대 위치 */
+  overflow: hidden; /* 오버플로우 방지 */
+  width: 100%; /* 2분할 레이아웃을 위해 추가 */
+  height: 100%; /* 높이를 섹션 전체로 설정 */
+  float: left; /* 왼쪽 또는 오른쪽 정렬 */
+  overflow: hidden; /* 오버플로우 방지 */
+}
+
+.image-wrapper3 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 이미지 비율 유지 */
+}
+
+.image-wrapper3:hover .overlay3 {
+  opacity: 1; /* 커서를 올리면 overlay3 표시 */
+}
+
+.overlay3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* 검은색 반투명 배경 */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0; /* 기본적으로 숨김 */
+  transition: opacity 0.3s ease-in-out; /* 부드러운 전환 효과 */
+}
+
+.overlay3 h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color : white;
+}
+
+.overlay3 button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.overlay3 button:hover {
+  background-color: #0056b3;
+}
+
+.container-fluid {
+  padding-bottom: 100px; /* Footer와의 간격 확보 */
+}
+
+
+.card {
+  width:80%;
+  margin:auto;
+  border: none;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card .row {
+  row-gap: 20px;
+  column-gap: 20px;
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.card {
+  border: none;
+  box-shadow: none;
+  text-align: center;
+}
+
+.card-title {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 0.8rem;
+}
+
+.card-text {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.card-text .discount {
+  color: red;
+  font-weight: bold;
+}
+
+.card-body {
+  text-align: center;
+}
+
+
+/* 할인율 스타일 */
+.discount-rate {
+  font-weight: bold;
+  font-size: 1rem;
+  margin-right: 10px;
+}
+
+/* 원가에 취소선 추가 */
+.original-price {
+  text-decoration: line-through;
+  color: #999;
+  font-size: 0.9rem;
+  margin-right: 10px;
+}
+
+/* 할인 가격 스타일 */
+.discount-price {
+  font-weight: bold;
+  font-size: 1rem;
+  color: #e60000; /* 강렬한 빨간색 */
+}
+
+/* 리뷰 스타일 */
+.review {
+  font-size: 0.8rem;
+  color: #555;
+  margin-top: 5px;
+}
+
+.last-content {
+  position: fixed;
+  width: 100%;
+  height: 80vh; /* 높이를 적당히 설정 (화면 높이의 60%) */
+  overflow: hidden; /* 초과 이미지 숨김 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.last-content img {
+  width: 100%;
+  height: 80%;
+  object-fit: cover; /* 화면 비율에 맞게 자르기 */
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.last-content .text-overlay {
+  position: absolute; /* 이미지 위에 겹치도록 설정 */
+  z-index: 1; /* 이미지 위로 표시 */
+  text-align: center;
+  color: white; /* 텍스트 색상 */
+  background-color: rgba(0, 0, 0, 0.5); /* 반투명 검정 배경 */
+  padding: 20px 40px;
+  border-radius: 8px;
+}
+
+.last-content .text-overlay h2 {
+  font-size: 2.5rem; /* 제목 크기 */
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.last-content .text-overlay button {
+  font-size: 1.2rem;
+  color: white;
+  background: transparent;
+  border: 2px solid white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.last-content .text-overlay button:hover {
+  background-color: white;
+  color: black;
+}
+
 /* 반응형 */
 
 @media (max-width: 768px) {
