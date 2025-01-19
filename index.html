@@ -16,6 +16,11 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="style.css" />
   </head>
 
@@ -91,7 +96,6 @@
       </div>
 
       <!--시작-->
-
       <main class="scroll-container">
         <section class="sections">
           <div
@@ -404,29 +408,12 @@
       <footer></footer>
       <!--header 및 footer는 화면 로드 시 자동으로 내용으로 로드됩니다.-->
     </div>
-    <script>
-      $(document).ready(() => {
-        if (typeof jQuery !== "undefined") {
-          console.log("reee");
-          $("header").load("./include/header.html");
-          $("footer").load("./include/footer.html");
-        } else {
-          console.log("jQuery not loaded");
-        }
-        $(".dropdown").hover(
-          () => {
-            $(this).find(".allMenuBox").fadeIn(200);
-          },
-          () => {
-            $(this).find(".allMenuBox").fadeOut(200);
-          }
-        );
-      });
-    </script>
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script src="/main.js"></script>
   </body>
 </html>
