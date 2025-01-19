@@ -58,14 +58,19 @@
 
 .form-check-input {
   margin-right: 5px;
-  background-color: black;
-  border: none;
+  background-color: white;
+  border: 1px solid #ebebeb;
 }
 
 .form-check-input:checked {
   margin-right: 5px;
   background-color: black;
   border: none;
+}
+
+.form-check-input:focus {
+  outline: none;
+  box-shadow: none;
 }
 
 .cart-all-check__delete {
